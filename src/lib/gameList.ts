@@ -34,7 +34,7 @@ export const GAMES: GameMeta[] = [
   { id: 'hilo', name: 'HiLo', path: '/hilo', icon: ArrowUpDown, blurb: 'Higher or lower, card by card.', tint: 'from-win/20 to-violet/20' },
   { id: 'blackjack', name: 'Blackjack', path: '/blackjack', icon: Spade, blurb: 'Beat the dealer to 21.', tint: 'from-cyan/20 to-card' },
   { id: 'ladder', name: 'Coin Ladder', path: '/coin-ladder', icon: Coins, blurb: 'Ten flips to the top. Freeze half on the way.', original: true, tint: 'from-violet/50 to-cyan/20' },
-  { id: 'vault', name: 'Vault Cracker', path: '/vault-cracker', icon: KeyRound, blurb: 'Spin three dials. Mind the alarms.', original: true, tint: 'from-violet/50 to-win/15' },
+  { id: 'vault', name: 'Vault Cracker', path: '/vault-cracker', icon: KeyRound, blurb: 'Pick three dials. Mind the alarms.', original: true, tint: 'from-violet/50 to-win/15' },
 ];
 
 export const gameById = (id: GameId) => GAMES.find((g) => g.id === id)!;

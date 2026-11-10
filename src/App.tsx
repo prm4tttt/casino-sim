@@ -5,21 +5,28 @@ import type { GameId } from './store/useStore';
 import Lobby from './pages/Lobby';
 import Stats from './pages/Stats';
 import Fairness from './pages/Fairness';
-import ComingSoon from './pages/ComingSoon';
 import Dice from './games/Dice';
 import Limbo from './games/Limbo';
 import Mines from './games/Mines';
 import Plinko from './games/Plinko';
 import Crash from './games/Crash';
 import Keno from './games/Keno';
+import Hilo from './games/Hilo';
+import Blackjack from './games/Blackjack';
+import CoinLadder from './games/CoinLadder';
+import Vault from './games/Vault';
 
-const SCREENS: Partial<Record<GameId, () => JSX.Element>> = {
+const SCREENS: Record<GameId, () => JSX.Element> = {
   dice: Dice,
   limbo: Limbo,
   mines: Mines,
   plinko: Plinko,
   crash: Crash,
   keno: Keno,
+  hilo: Hilo,
+  blackjack: Blackjack,
+  ladder: CoinLadder,
+  vault: Vault,
 };
 
 export default function App() {
@@ -29,7 +36,7 @@ export default function App() {
         <Route index element={<Lobby />} />
         {GAMES.map((g) => {
           const Screen = SCREENS[g.id];
-          return <Route key={g.id} path={g.path} element={Screen ? <Screen /> : <ComingSoon name={g.name} />} />;
+          return <Route key={g.id} path={g.path} element={<Screen />} />;
         })}
         <Route path="/stats" element={<Stats />} />
         <Route path="/fairness" element={<Fairness />} />
