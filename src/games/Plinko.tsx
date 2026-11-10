@@ -159,7 +159,7 @@ export default function Plinko() {
             return (
               <g key={`${k}-${active ? bump!.id : 'x'}`} className={active ? 'animate-pop' : ''} style={{ transformOrigin: `${x}px ${g.bucketY + h}px` }}>
                 <rect x={x - w / 2} y={g.bucketY + g.dx * 0.2} width={w} height={h} rx={w * 0.14} fill={bucketColor(k, rows)} opacity={active ? 1 : 0.85} />
-                <text x={x} y={g.bucketY + g.dx * 0.2 + h / 2} textAnchor="middle" dominantBaseline="central" fontSize={g.dx * 0.27} fontWeight={800} fill={Math.abs(k - rows / 2) / (rows / 2) < 0.3 ? '#FFFFFF' : '#0B0E14'} fontFamily="JetBrains Mono, monospace">
+                <text x={x} y={g.bucketY + g.dx * 0.2 + h / 2} textAnchor="middle" dominantBaseline="central" fontSize={g.dx * 0.3} fontWeight={800} fill={Math.abs(k - rows / 2) / (rows / 2) < 0.3 ? '#FFFFFF' : '#0B0E14'} fontFamily="JetBrains Mono, monospace">
                   {short(m)}
                 </text>
               </g>

@@ -36,3 +36,8 @@ npm run build
 ```
 
 Stack: React, TypeScript, Vite, Tailwind CSS, Zustand.
+
+## Deploy
+
+Pushing to `main` builds and publishes the site with GitHub Pages. Enable it once under
+**Settings → Pages → Source: GitHub Actions**.
