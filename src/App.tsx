@@ -8,10 +8,18 @@ import Fairness from './pages/Fairness';
 import ComingSoon from './pages/ComingSoon';
 import Dice from './games/Dice';
 import Limbo from './games/Limbo';
+import Mines from './games/Mines';
+import Plinko from './games/Plinko';
+import Crash from './games/Crash';
+import Keno from './games/Keno';
 
 const SCREENS: Partial<Record<GameId, () => JSX.Element>> = {
   dice: Dice,
   limbo: Limbo,
+  mines: Mines,
+  plinko: Plinko,
+  crash: Crash,
+  keno: Keno,
 };
 
 export default function App() {
